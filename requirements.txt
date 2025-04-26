@@ -1,0 +1,10 @@
+fastapi>=0.115.0
+uvicorn[standard]
+sqlalchemy>=2.0
+sqlalchemy[asyncio]
+psycopg2-binary
+python-jose
+passlib[bcrypt]
+pydantic>=2.8
+python-multipart
+watchfiles

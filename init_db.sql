@@ -1,0 +1,14 @@
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password_hash TEXT NOT NULL,
+    name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE symptoms (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    cough_level INTEGER NOT NULL CHECK (cough_level BETWEEN 0 AND 10),
+    breathlessness INTEGER NOT NULL CHECK (breathlessness BETWEEN 0 AND 10),
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
