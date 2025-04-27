@@ -12,24 +12,28 @@ Asthma API — это RESTful API для управления пользоват
 
 2. Создайте виртуальное окружение и активируйте его:
 
-python -m venv venv
-source venv/bin/activate  # Для Linux/MacOS
-venv\Scripts\activate     # Для Windows
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # Для Linux/MacOS
+   venv\Scripts\activate     # Для Windows
 
 3. Установите зависимости:
 
-pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
 
 4. Создайте файл .env в корне проекта и добавьте переменные окружения:
 
-SECRET_KEY=your_secret_key
-DATABASE_URL=postgresql+asyncpg://postgres:password@localhost:5432/asthma_db
+   ```bash
+   SECRET_KEY=your_secret_key
+   DATABASE_URL=postgresql+asyncpg://postgres:password@localhost:5432/asthma_db
 
 ## Запуск
 
 1. Запустите сервер разработки:
 
-uvicorn main:app --reload
+   ```bash
+   uvicorn main:app --reload
 
 2. API будет доступен по адресу: http://127.0.0.1:8000/docs
 
