@@ -109,6 +109,7 @@ asthma_api/
 **GET /auth/profile**
 
 Заголовок:
+
 Authorization: Bearer <access_token>
 
 Ответ:
@@ -125,6 +126,7 @@ Authorization: Bearer <access_token>
 **POST /symptoms**
 
 Заголовок:
+
 Authorization: Bearer <access_token>
 
 Тело запроса:
@@ -150,6 +152,7 @@ Authorization: Bearer <access_token>
 **GET /symptoms/history**
 
 Заголовок:
+
 Authorization: Bearer <access_token>
 
 Ответ:
