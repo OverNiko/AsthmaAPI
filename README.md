@@ -7,7 +7,7 @@ Asthma API — это RESTful API для управления пользоват
 1. Клонируйте репозиторий:
 
    ```bash
-   git clone https://github.com/your_username/your_repository.git
+   git clone https://github.com/OverNiko/AsthmaAPI.git
    cd your_repository
 
 2. Создайте виртуальное окружение и активируйте его:
