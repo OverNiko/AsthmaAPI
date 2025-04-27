@@ -8,7 +8,7 @@ Asthma API — это RESTful API для управления пользоват
 - PostgreSQL 12+
 
 ## Структура проекта
-
+```
 asthma_api/ 
 ├── models/ # SQLAlchemy модели 
 ├── routes/ # Маршруты FastAPI 
@@ -17,7 +17,7 @@ asthma_api/
 ├── config.py # Конфигурация проекта 
 ├── main.py # Точка входа в приложение 
 └── README.md # Документация
-
+```
 ## Лицензия
 
 Этот проект распространяется под лицензией MIT. Подробнее см. в файле [LICENSE](LICENSE).
@@ -76,30 +76,33 @@ asthma_api/
 **POST /auth/register**
 
 Тело запроса:
-```json
-{
-  "name": "Test User",
-  "email": "testuser@example.com",
-  "password": "testpassword123"
-}
+   ```json
+   {
+     "name": "Test User",
+     "email": "testuser@example.com",
+     "password": "testpassword123"
+   }
+   ```
 
 ### Авторизация
 
 **POST /auth/login**
 
 Тело запроса:
-```json
-{
-  "email": "testuser@example.com",
-  "password": "testpassword123"
-}
+   ```json
+   {
+     "email": "testuser@example.com",
+     "password": "testpassword123"
+   }
+   ```
 
 Ответ:
-```json
-{
-  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-  "token_type": "bearer"
-}
+   ```json
+   {
+     "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+     "token_type": "bearer"
+   }
+   ```
 
 ### Получение профиля
 
@@ -109,12 +112,13 @@ asthma_api/
 Authorization: Bearer <access_token>
 
 Ответ:
-```json
-{
-  "id": 1,
-  "name": "Test User",
-  "email": "testuser@example.com"
-}
+   ```json
+   {
+     "id": 1,
+     "name": "Test User",
+     "email": "testuser@example.com"
+   }
+   ```
 
 ### Добавление симптомов
 
@@ -124,20 +128,22 @@ Authorization: Bearer <access_token>
 Authorization: Bearer <access_token>
 
 Тело запроса:
-```json
-{
-  "cough_level": 7,
-  "breathlessness": 5
-}
+   ```json
+   {
+     "cough_level": 7,
+     "breathlessness": 5
+   }
+   ```
 
 Ответ:
-```json
-{
-  "id": 1,
-  "cough_level": 7,
-  "breathlessness": 5,
-  "timestamp": "2025-04-27T12:00:00Z"
-}
+   ```json
+   {
+     "id": 1,
+     "cough_level": 7,
+     "breathlessness": 5,
+     "timestamp": "2025-04-27T12:00:00Z"
+   }
+   ```
 
 ### История симптомов
 
@@ -147,22 +153,22 @@ Authorization: Bearer <access_token>
 Authorization: Bearer <access_token>
 
 Ответ:
-```json
-{
-  {
-    "id": 1,
-    "cough_level": 7,
-    "breathlessness": 5,
-    "timestamp": "2025-04-27T12:00:00Z"
-  },
-  {
-    "id": 2,
-    "cough_level": 3,
-    "breathlessness": 2,
-    "timestamp": "2025-04-26T15:30:00Z"
-  }
-}
-
+   ```json
+   {
+     {
+       "id": 1,
+       "cough_level": 7,
+       "breathlessness": 5,
+       "timestamp": "2025-04-27T12:00:00Z"
+     },
+     {
+       "id": 2,
+       "cough_level": 3,
+       "breathlessness": 2,
+       "timestamp": "2025-04-26T15:30:00Z"
+     }
+   }
+   ```
 ## Зависимости
 
 - Python 3.10+
