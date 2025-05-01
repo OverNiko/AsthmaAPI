@@ -24,7 +24,6 @@ async def create_symptom(
     new_symptom = Symptom(
         cough_level=symptom.cough_level,
         breathlessness=symptom.breathlessness,
-        timestamp=Column(DateTime, default=lambda: datetime.now(timezone.utc)),
         user_id=current_user.id
     )
     db.add(new_symptom)

@@ -8,3 +8,11 @@ passlib[bcrypt]
 pydantic>=2.8
 python-multipart
 watchfiles
+environs
+asyncpg
+python-dotenv
+alembic
+httpx
+pytest
+pytest-asyncio
+pydantic[email]

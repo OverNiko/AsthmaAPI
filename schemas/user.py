@@ -3,7 +3,7 @@ from pydantic import BaseModel, EmailStr, Field, ConfigDict
 
 class UserCreate(BaseModel):
     email: EmailStr
-    password: Annotated[str, Field(min_length=8)]
+    password: Annotated[str, Field(..., min_length=8, max_length=128)]
     name: str
 
 class UserResponse(BaseModel):
