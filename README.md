@@ -48,7 +48,7 @@ asthma_api/
    SECRET_KEY=your_secret_key
    DATABASE_URL=postgresql+asyncpg://postgres:password@localhost:5432/asthma_db
 
-5. Таблици для базы данных достуаны в файле: init_db.sql
+5. Таблицы для базы данных достуаны в файле: init_db.sql
 
 ## Запуск
 
